@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body id="body" class="h-screen flex flex-col">
+    <div id="nav">
+      <nav
+        class="max-w-screen-xl  mx-auto px-16 lg:px-28 bg-gray-100 p-4 shadow-lg"
+      >
+        <div class="container mx-auto  flex justify-between items-center">
+          <div class="flex items-center">
+            <img src="assets/logo.png" alt="" />
+            <span class="text-blue-500 font-bold text-xl">Dev</span>
+            <span class="text-black font-bold text-xl">Board</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <div
+              class="text-black rounded-full p-2 flex items-center bg-slate-300"
+            >
+              <span class="mr-2">
+                <img src="assets/checkbox.png" alt="" />
+              </span>
+              <span id="numberIN" class="font-bold">23</span>
+            </div>
+            <button
+              onclick="changeBackgroundColor()"
+              class="bg-slate-300 rounded-e-xl"
+            >
+              <img src="assets/theme-btn.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="mainSection" class="container mx-auto p-6 flex gap-6">
+      <div id="cardSection" class="w-3/4">
+        <section class="flex gap-6 max-w-screen-xl bg-gray-100 p-4 shadow-lg">
+          <div
+            class="flex gap-3 bg-violet-50 w-[263px] h-[128px] rounded-lg justify-center items-center"
+          >
+            <div>
+              <img src="assets/checkbox.png" alt="" />
+            </div>
+            <div>
+              <p class="font-poppins">Task Assigned</p>
+              <p id="numberOut" class="font-bold">06</p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-3 w-[524px] h-[128px] rounded-lg justify-center items-center ml-7 bg-[linear-gradient(90deg,#3752FD_0%,#6C7FFA_53%,#9BA8F8_100%)] text-white p-4"
+          >
+            <img src="assets/board.png" alt="" />
+            <a class="text-lg font-semibold" href="question.html">Discover Something <br />
+              New Today!</a>
+          </div>
+          <div
+            class="flex gap-3 bg-violet-50 w-[263px] h-[128px] rounded-lg justify-center items-center"
+          >
+            <div>
+              <img src="assets/calender.png" alt="" />
+            </div>
+            <p>
+              Wed ,<br/><span id="todayDate" class="font-bold"
+                >Jul 28 2025</span>
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section
+          class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-screen-xl bg-gray-100 p-4 shadow-lg"
+        >
+        <!-- 1 -->
+          <div 
+            class="card bg-white shadow-md p-4 border rounded-lg w-[342px] h-[287px]"
+          >
+            <div class="card-body flex flex-col justify-between h-full">
+              <p class="text-sm text-gray-500">ShopEase</p>
+              <h3  id="comment" class="text-lg font-bold my-2">Fix Mobile Button Issue</h3>
+              <details class="text-gray-700 bg-sky-50">
+                <summary
+                  class="cursor-pointer text-gray-500 hover:underline inline"
+                >
+                  Debug using Chrome <br />
+                  DevTools, check for overlapping...
+                </summary>
+                elements, and ensure onClick works properly
+              </details>
+
+              <div class="mt-auto flex items-center m-0 p-0 justify-between">
+                <div>
+                  <h6>Deadline</h6>
+                  <p class="font-bold">21 March 2025</p>
+                </div>
+               <button onclick="showAlert(this)" class="btn btn-primary btn-sm">Complete</button>
+
+
+              </div>
+            </div>
+          </div>
+<!-- 2 -->
+          <div
+            class="card bg-white shadow-md p-4 border rounded-lg w-[342px] h-[287px]"
+          >
+            <div class="card-body flex flex-col justify-between h-full">
+              <p class="text-sm text-gray-500">CloudSync</p>
+              <h3 class="text-lg font-bold my-2">Add Dark Mode</h3>
+              <details class="text-gray-700 bg-sky-50 p-2 rounded">
+                <summary
+                  class="cursor-pointer text-gray-500 hover:underline inline"
+                >
+                  Store the user's preference in localStorage, update CSS...
+                </summary>
+                dynamically, and apply a smooth transition effect.
+              </details>
+
+              <div class="mt-auto flex items-center m-0 p-0 justify-between">
+                <div>
+                  <h6>Deadline</h6>
+                  <p class="font-bold">21 March 2025</p>
+                </div>
+               <button onclick="showAlert(this)" class="btn btn-primary btn-sm">Complete</button>
+
+              </div>
+            </div>
+          </div>
+<!-- 3 -->
+          <div
+            class="card bg-white shadow-md p-4 border rounded-lg w-[342px] h-[287px]"
+          >
+            <div class="card-body flex flex-col justify-between h-full">
+              <p class="text-sm text-gray-500">SwiftPay</p>
+              <h3 class="text-lg font-bold my-2">Optimize Home page </h3>
+              <details class="text-gray-700 bg-sky-50 p-2 rounded">
+                <summary
+                  class="cursor-pointer text-gray-500 hover:underline inline"
+                >
+                  Store the user's preference in localStorage, update CSS...
+                </summary>
+                dynamically, and apply a smooth transition effect.
+              </details>
+
+              <div class="mt-auto flex items-center m-0 p-0 justify-between">
+                <div>
+                  <h6>Deadline</h6>
+                  <p class="font-bold">21 March 2025</p>
+                </div>
+                <button onclick="showAlert(this)" class="btn btn-primary btn-sm">Complete</button>
+
+              </div>
+            </div>
+          </div>
+<!-- 4 -->
+          <div
+            class="card bg-white shadow-md p-4 border rounded-lg w-[342px] h-[287px]"
+          >
+            <div class="card-body flex flex-col justify-between h-full">
+              <p class="text-sm text-gray-500">Meta</p>
+              <h3 class="text-lg font-bold my-2">Add new emoji 🤲</h3>
+              <details class="text-gray-700 bg-sky-50 p-2 rounded">
+                <summary
+                  class="cursor-pointer text-gray-500 hover:underline inline"
+                >
+                  Store the user's preference in localStorage, update CSS...
+                </summary>
+                dynamically, and apply a smooth transition effect.
+              </details>
+
+              <div class="mt-auto flex items-center m-0 p-0 justify-between">
+                <div>
+                  <h6>Deadline</h6>
+                  <p class="font-bold">21 March 2025</p>
+                </div>
+                <button onclick="showAlert(this)" class="btn btn-primary btn-sm">Complete</button>
+              </div>
+            </div>
+          </div>
+<!-- 5 -->
+          <div
+            class="card bg-white shadow-md p-4 border rounded-lg w-[342px] h-[287px]"
+          >
+            <div class="card-body flex flex-col justify-between h-full">
+              <p class="text-sm text-gray-500">Google LLC</p>
+              <h3 class="text-lg font-bold my-2">Integrate OpenAI API</h3>
+              <details class="text-gray-700 bg-sky-50 p-2 rounded">
+                <summary
+                  class="cursor-pointer text-gray-500 hover:underline inline"
+                >
+                  Store the user's preference in localStorage, update CSS...
+                </summary>
+                dynamically, and apply a smooth transition effect.
+              </details>
+
+              <div class="mt-auto flex items-center m-0 p-0 justify-between">
+                <div>
+                  <h6>Deadline</h6>
+                  <p class="font-bold">21 March 2025</p>
+                </div>
+               <button onclick="showAlert(this)" class="btn btn-primary btn-sm">Complete</button>
+
+              </div>
+            </div>
+          </div>
+<!--  -->
+          <div
+            class="card bg-white shadow-md p-4 border rounded-lg w-[342px] h-[287px]"
+          >
+            <div class="card-body flex flex-col justify-between h-full">
+              <p class="text-sm text-gray-500">Glassdoar</p>
+              <h3 class="text-lg font-bold my-2">Improve Job searching</h3>
+              <details class="text-gray-700 bg-sky-50 p-2 rounded">
+                <summary
+                  class="cursor-pointer text-gray-500 hover:underline inline"
+                >
+                  Store the user's preference in localStorage, update CSS...
+                </summary>
+                dynamically, and apply a smooth transition effect.
+              </details>
+
+              <div class="mt-auto flex items-center m-0 p-0 justify-between">
+                <div>
+                  <h6>Deadline</h6>
+                  <p class="font-bold">21 March 2025</p>
+                </div>
+              <button onclick="showAlert(this)" class="btn btn-primary btn-sm">Complete</button>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        id="textSection"
+        class="w-1/4 bg-gray-100 px-6 p-4 shadow-lg rounded-lg flex flex-col"
+      >
+        <div class="flex flex-col items-center mb-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/activity.png" alt="" class="w-6 h-6" />
+            <h3 class="text-lg font-bold">Activity Log</h3>
+          </div>
+          <button id="btnClearHistory" class="bg-[#304af3] text-white w-[150px] h-[44px] mt-3 rounded-lg">
+            Clear History
+          </button>
+        </div>
+        <hr class="my-2" />
+        <div  id="Comment-Container">
+            <textarea
+          class="w-full h-[400px] p-2 border rounded-lg flex-grow" name="text" id="inputText"></textarea>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="davboard.js"></script>
+  </body>
+</html>
